@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1600567653475">
+  <link rel="stylesheet" href="/css/style.css?v=1600567716405">
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -202,23 +202,20 @@
 
   <div class="nexmoe-post-footer">
     <section class="nexmoe-comment">
-    <style>
-  #nexmoe-content .nexmoe-comment {
-    background-color: #fff;
-    border-top: 20px solid #f5f6f5;
-  }
-</style>
-<script
-  async
-  src="https://comments.app/js/widget.js?2"
-  data-comments-app-website="michaelfang"
-  data-limit="5"
-  data-color=""
-  data-dislikes="0"
-  data-outlined="0"
-  data-colorful="0"
-></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '19ff8fefcd92cbb051b7',
+        clientSecret: 'dce6c37e3348604226e599390894f73ea56f5116',
+        id: window.location.pathname,
+        repo: 'fangziomg.github.io',
+        owner: 'FangziOMG',
+        admin: 'FangziOMG'
+    })
+    gitalk.render('gitalk')
+</script>
 </section>
   </div>
 </div>
@@ -231,7 +228,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1600567653476"></script>
+<script src="/js/app.js?v=1600567716405"></script>
   
 
 
