@@ -4,7 +4,7 @@
 
 <head>
   
-  <title>关于博客 - Michael&#39;s blog</title>
+  <title>在react-native中创建一个顶部导航栏 - Michael&#39;s blog</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -12,20 +12,21 @@
   
 
   <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/FangziOMG/fangziomg.github.io@latest/assets/profile-64.png" type="image/png" />
-  <meta name="description" content="我是Michael房，一个热爱科技的初中生。 为什么我要创建博客我创建一个自己的博客，最开始是从和一群Techguy一起建立一个网站开始的，当时我负责前端的搭建，而我有想到，为什么我不自己创建一个属于自己的网站？ 我博客的进化史从一开始，我的博客只是由Blocs可视化网页设计工具完成的，技术含量非常的低，文章写起来也很不舒服，排版也比较丑。直到禄晓瑞（我的朋友，我把他博客放到友情链接里了）使用了H">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于博客">
-<meta property="og:url" content="http://example.com/about.html">
+  <meta name="description" content="前言今天学react-native，花了很长时间摸索写出了一个简易的顶部导航栏，在这里给大家分享一下编写方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在react-native中创建一个顶部导航栏">
+<meta property="og:url" content="http://example.com/2020/10/01/appbar/index.html">
 <meta property="og:site_name" content="Michael&#39;s blog">
-<meta property="og:description" content="我是Michael房，一个热爱科技的初中生。 为什么我要创建博客我创建一个自己的博客，最开始是从和一群Techguy一起建立一个网站开始的，当时我负责前端的搭建，而我有想到，为什么我不自己创建一个属于自己的网站？ 我博客的进化史从一开始，我的博客只是由Blocs可视化网页设计工具完成的，技术含量非常的低，文章写起来也很不舒服，排版也比较丑。直到禄晓瑞（我的朋友，我把他博客放到友情链接里了）使用了H">
+<meta property="og:description" content="前言今天学react-native，花了很长时间摸索写出了一个简易的顶部导航栏，在这里给大家分享一下编写方法">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-09-20T00:44:59.855Z">
+<meta property="article:published_time" content="2020-09-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-10-01T09:14:23.288Z">
 <meta property="article:author" content="Michael Fang">
+<meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1601543778225">
+  <link rel="stylesheet" href="/css/style.css?v=1601543778228">
 <meta name="generator" content="Hexo 5.2.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -152,14 +153,14 @@
         <div class="nexmoe-post">
   
       <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
-          <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="关于博客" class="lazyload">
-          <h1>关于博客</h1>
+          <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="在react-native中创建一个顶部导航栏" class="lazyload">
+          <h1>在react-native中创建一个顶部导航栏</h1>
       </div>
   
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年09月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>301 字</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年10月01日</a>
+    <a><i class="nexmoefont icon-areachart"></i>225 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -168,18 +169,19 @@
   </div>
 
   <article>
-    <p><strong>我是Michael房，一个热爱科技的初中生。</strong></p>
-<h2 id="为什么我要创建博客"><a href="#为什么我要创建博客" class="headerlink" title="为什么我要创建博客"></a>为什么我要创建博客</h2><p>我创建一个自己的博客，最开始是从和一群Techguy一起建立一个网站开始的，当时我负责前端的搭建，而我有想到，为什么我不自己创建一个属于自己的网站？</p>
-<h2 id="我博客的进化史"><a href="#我博客的进化史" class="headerlink" title="我博客的进化史"></a>我博客的进化史</h2><p>从一开始，我的博客只是由Blocs可视化网页设计工具完成的，技术含量非常的低，文章写起来也很不舒服，排版也比较丑。直到<a target="_blank" rel="noopener" href="https://rainrain2007.github.io/">禄晓瑞</a>（我的朋友，我把他博客放到友情链接里了）使用了Hexo，然而我并没听说过hexo，但是最近我上手了这个十分方便的工具，它可以快速把方便写作的Markdown文档转化成可以浏览器访问的html网页，这对一个站长无非是很明显的方便。</p>
-<h2 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h2><p>现在你们所看到的博客，便是经过了这么多次改动和努力的博客，做博客说难也不困难，说简单也不易如反掌，总之你只要有投入在这上面，就一定会有回报。</p>
-
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>今天学react-native，花了很长时间摸索写出了一个简易的顶部导航栏，在这里给大家分享一下编写方法</strong></p>
+<a id="more"></a>
+<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p>废话不多说，先上源码:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;View, Text, StyleSheet&#125; <span class="keyword">from</span> <span class="string">&#x27;react-native&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Header = <span class="function">(<span class="params">&#123;title&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;View style=&#123;styles.header&#125;&gt;</span><br><span class="line">      &lt;Text style=&#123;styles.text&#125;&gt;&#123;title&#125;&lt;/Text&gt;</span><br><span class="line">    &lt;/View&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Header.defaultProps = &#123;</span><br><span class="line">  title: <span class="string">&#x27;AppBar&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> styles = StyleSheet.create(&#123;</span><br><span class="line">  header: &#123;</span><br><span class="line">    height: <span class="number">90</span>,</span><br><span class="line">    padding: <span class="number">45</span>,</span><br><span class="line">    backgroundColor: <span class="string">&#x27;darkslateblue&#x27;</span>,</span><br><span class="line">    paddingBottom: <span class="number">0</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  text: &#123;</span><br><span class="line">    color: <span class="string">&#x27;white&#x27;</span>,</span><br><span class="line">    fontSize: <span class="number">25</span>,</span><br><span class="line">    textAlign: <span class="string">&#x27;center&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Header;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义参数"><a href="#自定义参数" class="headerlink" title="自定义参数"></a>自定义参数</h2><p>在Style常量里面:<br>导航栏:<br>height = 导航栏高度<br>padding = 允许输入文字的范围<br>paddingBottom = 下半部分允许输入文字的范围<br>导航栏文字:<br>color = 文字颜色<br>fontSize = 文字大小<br>textAlign = 文字对齐(用word的时候都学过的吧)</p>
+<h2 id="谢谢阅读🙏"><a href="#谢谢阅读🙏" class="headerlink" title="谢谢阅读🙏"></a>谢谢阅读🙏</h2>
   </article>
 
   
     
   <div class="nexmoe-post-copyright">
     <strong>Author：</strong>Michael Fang<br>
-    <strong>Link：</strong><a href="http://example.com/about.html" title="http:&#x2F;&#x2F;example.com&#x2F;about.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;about.html</a><br>
+    <strong>Link：</strong><a href="http://example.com/2020/10/01/appbar/" title="http:&#x2F;&#x2F;example.com&#x2F;2020&#x2F;10&#x2F;01&#x2F;appbar&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2020&#x2F;10&#x2F;01&#x2F;appbar&#x2F;</a><br>
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
     
@@ -190,6 +192,8 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow">
     
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%BC%80%E5%8F%91/" rel="tag">开发</a>
     
 </div>
 
@@ -221,7 +225,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1601543778226"></script>
+<script src="/js/app.js?v=1601543778229"></script>
   
 
 
